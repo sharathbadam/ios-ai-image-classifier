@@ -29,9 +29,36 @@
 		0EACB09D2DEAB5FF00EC7D79 /* AiClassifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiClassifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0EACB0B22DEAB68600EC7D79 /* Exceptions for "AiClassifierUITests" folder in "AiClassifier" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MobileNetV2.mlmodel,
+			);
+			target = 0EACB0802DEAB5FD00EC7D79 /* AiClassifier */;
+		};
+		0EACB0B32DEAB68600EC7D79 /* Exceptions for "AiClassifierUITests" folder in "AiClassifierUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MobileNetV2.mlmodel,
+			);
+			target = 0EACB09C2DEAB5FF00EC7D79 /* AiClassifierUITests */;
+		};
+		0EACB0BB2DEABAC000EC7D79 /* Exceptions for "AiClassifier" folder in "AiClassifier" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0EACB0802DEAB5FD00EC7D79 /* AiClassifier */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0EACB0832DEAB5FD00EC7D79 /* AiClassifier */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0EACB0BB2DEABAC000EC7D79 /* Exceptions for "AiClassifier" folder in "AiClassifier" target */,
+			);
 			path = AiClassifier;
 			sourceTree = "<group>";
 		};
@@ -42,6 +69,10 @@
 		};
 		0EACB0A02DEAB5FF00EC7D79 /* AiClassifierUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0EACB0B22DEAB68600EC7D79 /* Exceptions for "AiClassifierUITests" folder in "AiClassifier" target */,
+				0EACB0B32DEAB68600EC7D79 /* Exceptions for "AiClassifierUITests" folder in "AiClassifierUITests" target */,
+			);
 			path = AiClassifierUITests;
 			sourceTree = "<group>";
 		};
@@ -400,6 +431,8 @@
 				DEVELOPMENT_TEAM = WL6FU7TC5H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AiClassifier/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +461,8 @@
 				DEVELOPMENT_TEAM = WL6FU7TC5H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AiClassifier/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
