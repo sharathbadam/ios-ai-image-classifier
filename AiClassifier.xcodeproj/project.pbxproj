@@ -34,6 +34,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				MobileNetV2.mlmodel,
+				Resnet50.mlmodel,
 			);
 			target = 0EACB0802DEAB5FD00EC7D79 /* AiClassifier */;
 		};
@@ -41,6 +42,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				MobileNetV2.mlmodel,
+				Resnet50.mlmodel,
 			);
 			target = 0EACB09C2DEAB5FF00EC7D79 /* AiClassifierUITests */;
 		};

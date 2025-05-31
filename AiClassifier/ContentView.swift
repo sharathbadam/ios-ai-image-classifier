@@ -82,7 +82,7 @@ struct ContentView: View {
     }
 
     func classifyImage(_ uiImage: UIImage) {
-        guard let model = try? VNCoreMLModel(for: MobileNetV2().model),
+        guard let model = try? VNCoreMLModel(for: Resnet50().model),
               let ciImage = CIImage(image: uiImage) else {
             classificationResult = "Failed to classify image"
             return
