@@ -16,34 +16,63 @@ struct ContentView: View {
     @State private var classificationResult = ""
 
     var body: some View {
-        VStack {
-            HStack {
-                Button("Take Photo") {
-                    sourceType = .camera
-                    showImagePicker = true
+        ZStack {
+            // Background wallpaper image
+            Image("Background") // Add an image named "background" to your Assets.xcassets
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+
+            VStack {
+                Spacer() // Push content to center vertically
+
+                HStack(spacing: 20) {
+                    Button(action: {
+                        sourceType = .camera
+                        showImagePicker = true
+                    }) {
+                        Text("Take Photo")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue.opacity(0.8))
+                            .cornerRadius(10)
+                    }
+
+                    Button(action: {
+                        sourceType = .photoLibrary
+                        showImagePicker = true
+                    }) {
+                        Text("Pick from Library")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.green.opacity(0.8))
+                            .cornerRadius(10)
+                    }
                 }
-                .padding()
 
-                Button("Pick from Library") {
-                    sourceType = .photoLibrary
-                    showImagePicker = true
+                if let selectedImage = image {
+                    Image(uiImage: selectedImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 300)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .shadow(radius: 10)
+                        .padding()
                 }
-                .padding()
-            }
 
-            if let selectedImage = image {
-                Image(uiImage: selectedImage)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 300)
-                    .padding()
-            }
+                if !classificationResult.isEmpty {
+                    Text("Prediction: \(classificationResult)")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.black.opacity(0.6))
+                        .cornerRadius(10)
+                }
 
-            if !classificationResult.isEmpty {
-                Text("Prediction: \(classificationResult)")
-                    .font(.headline)
-                    .padding()
+                Spacer() // Push content to center vertically
             }
+            .padding()
+
         }
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(sourceType: $sourceType,
